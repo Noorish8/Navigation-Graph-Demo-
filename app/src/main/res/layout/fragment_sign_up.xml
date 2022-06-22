@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".SignUpFragment"
+    android:background="@color/teal_200">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/human"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="35dp"/>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/name"
+            style="@style/EditeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_profile"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="@string/email"
+            style="@style/EditeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name"
+            android:layout_marginTop="20dp"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_passWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:hint="Password"
+            style="@style/EditeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email"
+            android:layout_marginTop="20dp"/>
+       <androidx.appcompat.widget.LinearLayoutCompat
+           android:id="@+id/line1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           app:layout_constrainedWidth="true"
+           android:layout_marginTop="20dp"
+           android:weightSum="2"
+           app:layout_constraintStart_toStartOf="@+id/et_name"
+           app:layout_constraintEnd_toEndOf="@+id/et_name"
+           app:layout_constraintTop_toBottomOf="@+id/et_passWord">
+
+           <androidx.appcompat.widget.AppCompatEditText
+               android:id="@+id/et_age"
+               style="@style/EditeText"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/age"
+               android:layout_weight="1"
+               android:layout_marginEnd="10dp"/>
+
+           <android.inputmethodservice.ExtractEditText
+               style="@style/EditeText"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/city"
+               android:layout_weight="1"/>
+
+       </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/EditeText"
+            android:hint="address"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintTop_toBottomOf="@+id/line1"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/et_description"
+            style="@style/EditeText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:gravity="top"
+            android:hint="@string/description"
+            android:scrollbars="vertical"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
+            app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            style="@style/button"
+            app:layout_constrainedWidth="true"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/et_description"
+            app:layout_constraintEnd_toEndOf="@+id/et_name"
+            app:layout_constraintStart_toStartOf="@+id/et_name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
