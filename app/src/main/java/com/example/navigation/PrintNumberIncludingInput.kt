@@ -21,11 +21,12 @@ class PrintNumberIncludingInput : AppCompatActivity() {
 
         binding.btn.setOnClickListener {
             val inputNumber=txtInput.toString().toInt()
-            if (inputNumber<0 && inputNumber>100){
+            //if (inputNumber<0 && inputNumber>100){
+            if (inputNumber<0 || inputNumber>100){
 
             } else{
                 for (i in inputNumber..(inputNumber + 10)){
-
+                   println(i)
                 }
 
             }
