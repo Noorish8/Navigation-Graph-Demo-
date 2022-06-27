@@ -20,4 +20,34 @@
         android:name="com.example.navigation.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+
+
+    <fragment
+        android:id="@+id/title_destination"
+        android:name="com.example.navigation.title.TiteleFragment"
+        android:label="fragment_titele"
+        tools:layout="@layout/fragment_titele" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/score_destination"
+        android:name="com.example.navigation.score.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" >
+        <argument
+            android:name="score"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/game_destination"
+        android:name="com.example.navigation.game.GameFragment"
+        android:label="fragment_game2"
+        tools:layout="@layout/fragment_game2" >
+
+        <action
+            android:id="@+id/action_game_destination_to_score_destination"
+            app:destination="@id/score_destination"
+            app:popUpTo="@+id/title_destination"/>
+    </fragment>
 </navigation>
